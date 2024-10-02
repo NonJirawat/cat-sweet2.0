@@ -1,0 +1,47 @@
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidenav" [class.sidenav-collapsed]="isCollapsed">
+      <div class="logo-container">
+        <button class="logo" (click)="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo-text" *ngIf="!isCollapsed">CAT-SWEET</div>
+        
+      </div>
+  
+      <!-- Menu -->
+      <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" (click)="selectMenu('home')">
+          <a routerLink="/home" class="sidenav-nav-link">
+            <i class="fas fa-home sidenav-link-icon"></i>
+            <span class="sidenav-link-text" *ngIf="!isCollapsed">Home</span>
+          </a>
+        </li>
+        <li class="sidenav-nav-item" (click)="selectMenu('dashboard')">
+          <a routerLink="/dashboard" class="sidenav-nav-link">
+            <i class="fa fa-envelope sidenav-link-icon"></i>
+            <span class="sidenav-link-text" *ngIf="!isCollapsed">Request</span>
+          </a>
+        </li>
+        <li class="sidenav-nav-item">
+          <a routerLink="/dooduang" class="sidenav-nav-link">
+            <i class="fa fa-transgender sidenav-link-icon"></i>
+            <span class="sidenav-link-text" *ngIf="!isCollapsed">Dooduang</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="dropdown" style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px;">
+        <!-- ใช้รูปภาพเป็น trigger -->
+        <a href="#" class="d-flex align-items-center text-white text-decoration" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://thefetus.net/images/web/profile-default.png?v=2" alt="" width="32" height="32" class="rounded-circle me-2">
+          <span class="sidenav-link-text" *ngIf="!isCollapsed"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+          <li><a class="dropdown-item" href="#">Sign Up</a></li>
+        </ul>
+</div>
+
+    </div>
+  
+  

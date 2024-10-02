@@ -1,0 +1,81 @@
+/* ตั้งค่าพื้นหลังของหน้า */
+.login-container, .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; /* สีพื้นหลังสีน้ำเงินอ่อน */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* การตั้งค่ากล่องการ์ด */
+  .login-card, .register-card {
+    background-color: #ffffff; /* พื้นหลังการ์ดสีขาว */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* เงาสวยๆ */
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* การตั้งค่าหัวข้อ */
+  .login-card:hover, .register-card:hover {
+    transform: translateY(-10px); /* เอฟเฟกต์ hover */
+  }
+  
+  h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #007bff; /* สีน้ำเงิน */
+  }
+  
+  /* การตั้งค่าฟอร์ม */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 2px solid #007bff; /* กรอบสีน้ำเงิน */
+    font-size: 16px;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #0056b3; /* กรอบเปลี่ยนเป็นสีน้ำเงินเข้มเมื่อคลิก */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* การตั้งค่าปุ่ม */
+  .btn-primary {
+    background-color: #007bff; /* ปุ่มสีน้ำเงิน */
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* เปลี่ยนสีน้ำเงินเข้มเมื่อ hover */
+  }
+  
+  /* การตั้งค่าลิงก์ */
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

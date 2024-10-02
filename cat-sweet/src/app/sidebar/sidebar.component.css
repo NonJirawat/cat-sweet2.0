@@ -1,0 +1,103 @@
+.sidenav {
+    background: #012a5b;
+    transition: width 0.5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+    padding: 20px;
+  }
+  
+  .sidenav-collapsed {
+    width: 60px; /* ขนาดเมื่อย่อ */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+  
+  .logo-text {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .sidenav-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .sidenav-nav-item {
+    margin-bottom: 20px;
+  }
+  
+  .sidenav-nav-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* ปรับขนาดตัวหนังสือสำหรับลิงก์ใน Sidebar */
+  }
+  
+  .sidenav-nav-link:hover {
+    background-color: #004080;
+  }
+  
+  .sidenav-link-icon {
+    font-size: 22px; /* ขนาดไอคอน */
+    width: 40px;
+    text-align: center;
+    margin-left: -10px; /* ขยับไอคอนให้ตรงกับข้อความ */
+  }
+  
+  .sidenav-link-text {
+    margin-left: 10px;
+    font-size: 16px; /* ปรับขนาดตัวหนังสือ */
+  }
+  
+  .content {
+    margin-left: 280px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+  }
+  
+  .content-expanded {
+    margin-left: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidenav {
+      width: 100px;
+    }
+  
+    .sidenav-collapsed {
+      width: 60px;
+    }
+  
+    .content {
+      margin-left: 100px;
+    }
+  
+    .content-expanded {
+      margin-left: 60px;
+    }
+  }
+  
