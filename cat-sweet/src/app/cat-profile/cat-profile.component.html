@@ -1,0 +1,46 @@
+<div class="container">
+  <h2>Cat Profiles</h2>
+
+  <!-- Cat Profile Upload Form -->
+  <form (ngSubmit)="onSubmit(catForm)" #catForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" class="form-control" name="name" ngModel required>
+    </div>
+
+    <div class="form-group">
+      <label for="breed">Breed:</label>
+      <input type="text" id="breed" class="form-control" name="breed" ngModel required>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" id="age" class="form-control" name="age" ngModel required>
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" id="location" class="form-control" name="location" ngModel required>
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="file" id="image" class="form-control" (change)="onFileSelected($event)" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <hr>
+
+  <!-- Cat Profile List -->
+  <div class="card-container">
+    <div class="card" *ngFor="let cat of cats">
+      <img [src]="'/uploads/' + cat.Image" alt="{{ cat.name }}">
+      <h3>{{ cat.Name }}</h3>
+      <p><strong>Breed:</strong> {{ cat.Breed }}</p>
+      <p><strong>Age:</strong> {{ cat.Age }}</p>
+      <p><strong>Location:</strong> {{ cat.Location }}</p>
+    </div>
+  </div>
+</div>

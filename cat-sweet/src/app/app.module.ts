@@ -8,6 +8,10 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CatProfileComponent } from './cat-profile/cat-profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -15,13 +19,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    SidebarComponent
+    SidebarComponent,
+    CatProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

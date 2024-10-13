@@ -13,13 +13,14 @@ const dbConfig = {
 };
 
 const poolPromise = new sql.ConnectionPool(dbConfig)
-  .connect()
-  .then(pool => {
-    console.log('Connected to SQL Server');
-    return pool;
-  })
-  .catch(err => console.log('Database connection failed: ', err));
+    .connect()
+    .then(pool => {
+        console.log('Connected to SQL Server');
+        return pool;
+    })
+    .catch(err => {
+        console.log('Database Connection Failed! Bad Config: ', err);
+    });
 
-module.exports = {
-  sql, poolPromise
-};
+// ส่งออกทุกอย่างเป็นอ็อบเจ็กต์เดียว
+module.exports = { sql, poolPromise, dbConfig };
