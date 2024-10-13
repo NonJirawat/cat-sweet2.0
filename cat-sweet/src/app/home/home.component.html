@@ -1,144 +1,15 @@
 <app-sidebar></app-sidebar>
-<section class="pets-section"><br>
-  <h2>แนะนำ</h2><br>
-  <div class="pet-cards-container">
-      <div class="pet-card">
-          <img src="https://www.cathousecattery.com/cathousenew/british-bilion.JPG" alt="British Shorthair Kittens">
-          <div class="pet-details">
-              <h3>แฮรี่</h3>
-              <p><strong>สายพันธุ์:</strong> แมวบริติช ช็อตแฮร์</p>
-              <p><strong>อายุ:</strong> 1 เดือน 10 วัน</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-                จตุจักร, กรุงเทพมหานคร
-              </p>
-              
+<div class="container">
+  <h2>Cat Profiles</h2>
 
-            
-          </div>
-      </div>
-      
-      <div class="pet-card">
-          <img src="https://pbs.twimg.com/media/FUdg0B4UUAIytc_.jpg:large" alt="Mixed Breed Kittens">
-          <div class="pet-details">
-              <h3>ใจดี</h3>
-              <p><strong>สายพันธุ์:</strong> แมวบริติช ช็อตแฮร์</p>
-              <p><strong>อายุ:</strong> 10 เดือน 22 วัน</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-                พิษณุโลก, พิษณุโลก
-              </p>
-           
-          </div>
-      </div>
-      <div class="pet-card">
-          <img src="https://lppuppy.com/wp-content/uploads/2023/12/DSC05933-scaled.jpg" alt="Sphynx Kitten">
-          <div class="pet-details"[routerLink]="['/profile']">
-              <h3>รูนิน</h3>
-              <p><strong>สายพันธุ์:</strong> แมวสฟิงซ์</p>
-              <p><strong>อายุ:</strong> 2 เดือน</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-                เชียงใหม่, เชียงใหม่
-              </p>
-              
-          </div>
-      </div>
-      <div class="pet-card">
-          <img src="https://t1.blockdit.com/photos/2020/02/5e38217e58a8400810318c59_800x0xcover_jk52FujA.jpg" alt="Scottish Fold Kitten">
-          <div class="pet-details">
-              <h3>จีจี้</h3>
-              <p><strong>สายพันธุ์:</strong> แมวสก็อตติช โฟลด์</p>
-              <p><strong>อายุ:</strong> 3 เดือน</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-                ขอนแก่น, ขอนแก่น
-              </p>
-              
-          </div>
-      </div>
-      
+  <!-- Cat Profile List -->
+  <div class="card-container">
+    <div class="card" *ngFor="let cat of cats">
+      <img [src]="'/uploads/' + cat.Image" alt="{{ cat.Name }}">
+      <h3>{{ cat.Name }}</h3>
+      <p><strong>Breed:</strong> {{ cat.Breed }}</p>
+      <p><strong>Age:</strong> {{ cat.Age }}</p>
+      <p><strong>Location:</strong> {{ cat.Location }}</p>  <!-- Corrected here -->
+    </div>
   </div>
-  
-</section>
-<section class="pets-section"><br>
-  <div class="pet-cards-container">
-      <div class="pet-card">
-        <img src="https://cdn.discordapp.com/attachments/737860723543375953/1288573636919431179/Cat_Matchmaking_Brand_Logo.png?ex=66f5ad37&is=66f45bb7&hm=a6a55d4fa7e63d32ecc489b1c32c05a30d9d3c36f22908ebcaa056fbe293d7e7&" />
-          <div class="pet-details">
-              <h3>-</h3>
-              <p><strong>สายพันธุ์:</strong> -</p>
-              <p><strong>อายุ:</strong> -</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-              -
-              </p>
-              
-
-            
-          </div>
-      </div>
-      
-      <div class="pet-card">
-          <img src="https://cdn.discordapp.com/attachments/737860723543375953/1288573636919431179/Cat_Matchmaking_Brand_Logo.png?ex=66f5ad37&is=66f45bb7&hm=a6a55d4fa7e63d32ecc489b1c32c05a30d9d3c36f22908ebcaa056fbe293d7e7&" />
-          <div class="pet-details">
-              <h3>-</h3>
-              <p><strong>สายพันธุ์:</strong> -</p>
-              <p><strong>อายุ:</strong> -</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-               -
-              </p>
-           
-          </div>
-      </div>
-      <div class="pet-card">
-        <img src="https://cdn.discordapp.com/attachments/737860723543375953/1288573636919431179/Cat_Matchmaking_Brand_Logo.png?ex=66f5ad37&is=66f45bb7&hm=a6a55d4fa7e63d32ecc489b1c32c05a30d9d3c36f22908ebcaa056fbe293d7e7&" />
-          <div class="pet-details"[routerLink]="['/profile']">
-              <h3>-</h3>
-              <p><strong>สายพันธุ์:</strong> -</p>
-              <p><strong>อายุ:</strong> -</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-               -
-              </p>
-              
-          </div>
-      </div>
-      <div class="pet-card">
-          <img src="https://cdn.discordapp.com/attachments/737860723543375953/1288573636919431179/Cat_Matchmaking_Brand_Logo.png?ex=66f5ad37&is=66f45bb7&hm=a6a55d4fa7e63d32ecc489b1c32c05a30d9d3c36f22908ebcaa056fbe293d7e7&" />
-          <div class="pet-details">
-              <h3>-</h3>
-              <p><strong>สายพันธุ์:</strong> -</p>
-              <p><strong>อายุ:</strong> -</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="12" height="12" fill="#FF6347">
-                  <path d="M168 0C75.1 0 0 75 0 168C0 293.9 168 512 168 512S336 293.9 336 168C336 75 260.9 0 168 0zM168 240C130.7 240 96 205.3 96 168S130.7 96 168 96S240 130.7 240 168S205.3 240 168 240z"/>
-                </svg>
-              -
-              </p>
-              
-          </div>
-      </div>
-      
-  </div>
-  
-</section>
-
-
-
- 
+</div>

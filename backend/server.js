@@ -1,17 +1,25 @@
 const express = require('express');
-const cors = require('cors'); // นำเข้า CORS
-
+const bodyParser = require('body-parser');
+const path = require('path');
+const loginRoutes = require('./auth');
 const app = express();
+const cors = require('cors');
+const catsRoutes = require('./cats'); // นำเข้าเส้นทางจากไฟล์ cats.js
 
-// เปิดใช้งาน CORS สำหรับทุกคำขอ
-app.use(cors());
+app.use('/uploads', express.static('uploads'));
 
-// ส่วนที่เหลือของโค้ดเซิร์ฟเวอร์
-app.use(express.json());
 
-app.use('/api/auth', require('./auth'));
+app.use(cors()); // ใช้ CORS middleware
 
+// ใช้ body-parser สำหรับการจัดการ JSON body
+app.use(bodyParser.json());
+
+// ใช้เส้นทาง API จาก cats.js
+app.use('/api/auth', loginRoutes);
+app.use('/api/cats', catsRoutes);
+
+// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

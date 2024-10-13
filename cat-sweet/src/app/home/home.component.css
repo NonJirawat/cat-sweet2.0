@@ -1,85 +1,49 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body {
-    background-color: #f5f5f5;
-    padding: 20px;
-  }
-  
-  .pets-section {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .pets-section h2 {
-    font-size: 1.8rem; /* Reduced the size of the main heading */
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .pet-cards-container {
-    display: flex;
-    justify-content: center; /* Center the cards horizontally */
-    flex-wrap: wrap; /* Allow cards to wrap if needed */
-    gap: 15px; /* Reduce gap between cards */
-    max-width: 1200px; /* Limit the width of the content */
-    margin: 0 auto; /* Center the container */
-  }
-  
-  .pet-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-    width: 180px; /* Fixed width for each card */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .pet-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .pet-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .pet-details {
-    padding: 10px;
-    text-align: left; /* Align text to the left */
-  }
-  
-  .pet-details h3 {
-    font-size: 0.9rem; /* Reduced title size */
-    color: #333;
-    margin-bottom: 8px;
-  }
-  
-  .pet-details p {
-    font-size: 0.75rem; /* Reduced description size */
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  .pet-details .price {
-    font-size: 0.85rem; /* Reduced price text size */
-    color: red;
-    font-weight: bold;
-    text-align: right; /* Align price to the right */
-  }
-  
-  .pet-details p:last-child {
-    margin-bottom: 0; /* Ensure last paragraph has no margin */
-  }
-  .pet-details p i {
-    color: #FF6347; /* Color of the location icon */
-    margin-right: 5px; /* Add some space between the icon and the text */
-  }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2em;
+}
